@@ -1,0 +1,14 @@
+C:\xfiles\code\CSharp\VProject\VProject\bin\Debug\Services\JsonToClass.cs
+C:\xfiles\code\CSharp\VProject\VProject\bin\Debug\VProject.exe.config
+C:\xfiles\code\CSharp\VProject\VProject\bin\Debug\VProject.exe
+C:\xfiles\code\CSharp\VProject\VProject\bin\Debug\VProject.pdb
+C:\xfiles\code\CSharp\VProject\VProject\bin\Debug\Newtonsoft.Json.dll
+C:\xfiles\code\CSharp\VProject\VProject\bin\Debug\Newtonsoft.Json.xml
+C:\xfiles\code\CSharp\VProject\VProject\obj\Debug\VProject.csproj.AssemblyReference.cache
+C:\xfiles\code\CSharp\VProject\VProject\obj\Debug\VProject.Properties.Resources.resources
+C:\xfiles\code\CSharp\VProject\VProject\obj\Debug\VProject.Ui.Mainframe.resources
+C:\xfiles\code\CSharp\VProject\VProject\obj\Debug\VProject.csproj.GenerateResource.cache
+C:\xfiles\code\CSharp\VProject\VProject\obj\Debug\VProject.csproj.CoreCompileInputs.cache
+C:\xfiles\code\CSharp\VProject\VProject\obj\Debug\VProject.csproj.CopyComplete
+C:\xfiles\code\CSharp\VProject\VProject\obj\Debug\VProject.exe
+C:\xfiles\code\CSharp\VProject\VProject\obj\Debug\VProject.pdb
