@@ -25,4 +25,25 @@ public class GearRatio{
         Rear=rear;
         FinalDrive=final;
     }
+    public static string[] GetGears()=>["First","Second","Third","Fourth","Fifth","Sixth","Rear"];
+    public static Gear GetGears(string g) => g switch{
+        "First"=>Gear.First,
+        "Second"=>Gear.Second,
+        "Third"=>Gear.Third,
+        "Fourth"=>Gear.Fourth,
+        "Fifth"=>Gear.Fifth,
+        "Sixth"=>Gear.Sixth,
+        "Rear"=>Gear.Rear,
+        _=>Gear.UNDEFINED
+    };
+}
+public enum Gear{
+    UNDEFINED=-1,
+    First,
+    Second,
+    Third,
+    Fourth,
+    Fifth,
+    Sixth,
+    Rear
 }

@@ -53,6 +53,8 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Data\Calculator.cs" />
+        <Compile Include="Data\Car.cs" />
+        <Compile Include="Data\CarContainer.cs" />
         <Compile Include="Data\Converter.cs" />
         <Compile Include="Data\GearRatio.cs" />
         <Compile Include="Data\Wheel.cs" />
@@ -95,7 +97,7 @@
         <None Include="App.config"/>
     </ItemGroup>
     <ItemGroup>
-      <Content Include="Resources\GearRatiosConfig.json" />
+      <Content Include="Resources\CarsList.json" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 </Project>
