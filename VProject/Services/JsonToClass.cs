@@ -23,7 +23,7 @@ public static class JsonToClass{
             string fullJson=File.ReadAllText(Path.Combine(path,fileName));
             return convert(JsonConvert.DeserializeObject<JObject>(fullJson,settings));
         }catch(Exception ex){
-            // Log.Error(ex.ToString());
+            Log.Error(ex.ToString());
             return _default;
         }
     }

@@ -66,6 +66,7 @@
           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Compile>
         <Compile Include="Services\Log.cs" />
+        <Compile Include="Services\StringHelper.cs" />
         <Compile Include="Ui\Mainframe.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -97,7 +98,9 @@
         <None Include="App.config"/>
     </ItemGroup>
     <ItemGroup>
-      <Content Include="Resources\CarsList.json" />
+      <Content Include="Resources\CarsList.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 </Project>

@@ -9,6 +9,7 @@ public class Car{
     public GearRatio GearRatios {get;set;}
     public int Weight {get;set;}
     public int Power {get;set;}
+    public string Name=>$"{Brand} {Model}"; // {Series}
 
     [JsonConstructor]
     public Car(string brand,string model,string series,GearRatio gearRatios,int weight,int power){

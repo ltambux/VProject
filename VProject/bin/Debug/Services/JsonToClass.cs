@@ -23,8 +23,24 @@ public static class JsonToClass{
             string fullJson=File.ReadAllText(Path.Combine(path,fileName));
             return convert(JsonConvert.DeserializeObject<JObject>(fullJson,settings));
         }catch(Exception ex){
-            // Log.Error(ex.ToString());
+            Log.Error(ex.ToString());
             return _default;
+        }
+    }
+    public static T ReadFromJsom<T>(string fileName)where T:class{
+        if(fileName is null or ""){
+            // Log.Error($".{nameof(ReadFromJsom)}<{nameof(T)}>() > file name null or empty");
+            throw new ArgumentNullException("","");
+        }
+        try{
+            string path=Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            JsonSerializerSettings settings=new();
+            settings.ContractResolver=new CamelCasePropertyNamesContractResolver();
+            string fullJson=File.ReadAllText(Path.Combine(path,fileName));
+            return JsonConvert.DeserializeObject<T>(fullJson,settings);
+        }catch(Exception ex){
+            Log.Error(ex.ToString());
+            return null;
         }
     }
 

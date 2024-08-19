@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Newtonsoft.Json;
 using VProject.Services;
 
 namespace VProject.Data;
@@ -11,9 +10,8 @@ public class CarContainer{
 
     private CarContainer(){
         Cars=[];
-        Log.Debug("Prova di lettura del json");
         try {
-            Cars=JsonToClass.ReadFromJsom<List<Car>>("CarsList.json");
+            Cars=JsonToClass.ReadFromJsom<List<Car>>(@"Resources\CarsList.json");
         }catch(Exception ex){
             Log.Error(ex.ToString());
         }

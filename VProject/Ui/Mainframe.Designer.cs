@@ -37,13 +37,19 @@
             this.boxFDrive = new System.Windows.Forms.TextBox();
             this.lblCar = new System.Windows.Forms.Label();
             this.cmbCar = new System.Windows.Forms.ComboBox();
+            this.lblResRPM = new System.Windows.Forms.Label();
+            this.lblVelocity = new System.Windows.Forms.Label();
+            this.boxV = new System.Windows.Forms.TextBox();
+            this.lblKmh = new System.Windows.Forms.Label();
+            this.boxRPMs = new System.Windows.Forms.TextBox();
+            this.lblWdMeasure = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cmbDiam
             // 
             this.cmbDiam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDiam.FormattingEnabled = true;
-            this.cmbDiam.Location = new System.Drawing.Point(138, 81);
+            this.cmbDiam.Location = new System.Drawing.Point(136, 77);
             this.cmbDiam.Margin = new System.Windows.Forms.Padding(0);
             this.cmbDiam.Name = "cmbDiam";
             this.cmbDiam.Size = new System.Drawing.Size(80, 26);
@@ -64,7 +70,7 @@
             // 
             this.cmbWidth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbWidth.FormattingEnabled = true;
-            this.cmbWidth.Location = new System.Drawing.Point(220, 81);
+            this.cmbWidth.Location = new System.Drawing.Point(220, 77);
             this.cmbWidth.Margin = new System.Windows.Forms.Padding(0);
             this.cmbWidth.Name = "cmbWidth";
             this.cmbWidth.Size = new System.Drawing.Size(100, 26);
@@ -75,26 +81,26 @@
             // 
             this.cmbPerc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPerc.FormattingEnabled = true;
-            this.cmbPerc.Location = new System.Drawing.Point(322, 81);
+            this.cmbPerc.Location = new System.Drawing.Point(324, 77);
             this.cmbPerc.Margin = new System.Windows.Forms.Padding(0);
             this.cmbPerc.Name = "cmbPerc";
-            this.cmbPerc.Size = new System.Drawing.Size(60, 26);
+            this.cmbPerc.Size = new System.Drawing.Size(64, 26);
             this.cmbPerc.TabIndex = 3;
             this.cmbPerc.SelectedIndexChanged += new System.EventHandler(this.cmbPerc_IndexChange);
             // 
             // boxWtot
             // 
-            this.boxWtot.Enabled = false;
-            this.boxWtot.Location = new System.Drawing.Point(592, 81);
+            this.boxWtot.Location = new System.Drawing.Point(560, 77);
             this.boxWtot.Margin = new System.Windows.Forms.Padding(0);
             this.boxWtot.Name = "boxWtot";
+            this.boxWtot.ReadOnly = true;
             this.boxWtot.Size = new System.Drawing.Size(100, 26);
             this.boxWtot.TabIndex = 4;
             // 
             // lblWdRes
             // 
             this.lblWdRes.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblWdRes.Location = new System.Drawing.Point(432, 81);
+            this.lblWdRes.Location = new System.Drawing.Point(400, 78);
             this.lblWdRes.Margin = new System.Windows.Forms.Padding(0);
             this.lblWdRes.Name = "lblWdRes";
             this.lblWdRes.Size = new System.Drawing.Size(160, 22);
@@ -116,7 +122,7 @@
             // 
             this.cmbGearSelection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGearSelection.FormattingEnabled = true;
-            this.cmbGearSelection.Location = new System.Drawing.Point(136, 192);
+            this.cmbGearSelection.Location = new System.Drawing.Point(136, 191);
             this.cmbGearSelection.Margin = new System.Windows.Forms.Padding(0);
             this.cmbGearSelection.Name = "cmbGearSelection";
             this.cmbGearSelection.Size = new System.Drawing.Size(80, 26);
@@ -126,16 +132,17 @@
             // boxGear
             // 
             this.boxGear.Enabled = false;
-            this.boxGear.Location = new System.Drawing.Point(218, 192);
+            this.boxGear.Location = new System.Drawing.Point(220, 191);
             this.boxGear.Margin = new System.Windows.Forms.Padding(0);
             this.boxGear.Name = "boxGear";
+            this.boxGear.ReadOnly = true;
             this.boxGear.Size = new System.Drawing.Size(100, 26);
             this.boxGear.TabIndex = 8;
             // 
             // lblFDrive
             // 
             this.lblFDrive.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblFDrive.Location = new System.Drawing.Point(452, 147);
+            this.lblFDrive.Location = new System.Drawing.Point(420, 192);
             this.lblFDrive.Margin = new System.Windows.Forms.Padding(0);
             this.lblFDrive.Name = "lblFDrive";
             this.lblFDrive.Size = new System.Drawing.Size(140, 22);
@@ -145,10 +152,10 @@
             // 
             // boxFDrive
             // 
-            this.boxFDrive.Enabled = false;
-            this.boxFDrive.Location = new System.Drawing.Point(592, 147);
+            this.boxFDrive.Location = new System.Drawing.Point(560, 191);
             this.boxFDrive.Margin = new System.Windows.Forms.Padding(0);
             this.boxFDrive.Name = "boxFDrive";
+            this.boxFDrive.ReadOnly = true;
             this.boxFDrive.Size = new System.Drawing.Size(100, 26);
             this.boxFDrive.TabIndex = 9;
             // 
@@ -173,12 +180,77 @@
             this.cmbCar.TabIndex = 12;
             this.cmbCar.SelectedIndexChanged += new System.EventHandler(this.cmbCar_Change);
             // 
+            // lblResRPM
+            // 
+            this.lblResRPM.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblResRPM.Location = new System.Drawing.Point(16, 281);
+            this.lblResRPM.Margin = new System.Windows.Forms.Padding(0);
+            this.lblResRPM.Name = "lblResRPM";
+            this.lblResRPM.Size = new System.Drawing.Size(120, 22);
+            this.lblResRPM.TabIndex = 13;
+            this.lblResRPM.Text = "RPMs";
+            // 
+            // lblVelocity
+            // 
+            this.lblVelocity.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblVelocity.Location = new System.Drawing.Point(16, 243);
+            this.lblVelocity.Margin = new System.Windows.Forms.Padding(0);
+            this.lblVelocity.Name = "lblVelocity";
+            this.lblVelocity.Size = new System.Drawing.Size(120, 22);
+            this.lblVelocity.TabIndex = 14;
+            this.lblVelocity.Text = "Velocity";
+            // 
+            // boxV
+            // 
+            this.boxV.Location = new System.Drawing.Point(136, 240);
+            this.boxV.Margin = new System.Windows.Forms.Padding(0);
+            this.boxV.Name = "boxV";
+            this.boxV.Size = new System.Drawing.Size(100, 26);
+            this.boxV.TabIndex = 15;
+            this.boxV.TextChanged += new System.EventHandler(this.boxV_TextChanged);
+            // 
+            // lblKmh
+            // 
+            this.lblKmh.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblKmh.Location = new System.Drawing.Point(236, 243);
+            this.lblKmh.Margin = new System.Windows.Forms.Padding(0);
+            this.lblKmh.Name = "lblKmh";
+            this.lblKmh.Size = new System.Drawing.Size(44, 22);
+            this.lblKmh.TabIndex = 16;
+            this.lblKmh.Text = "km/h";
+            // 
+            // boxRPMs
+            // 
+            this.boxRPMs.Location = new System.Drawing.Point(136, 278);
+            this.boxRPMs.Margin = new System.Windows.Forms.Padding(0);
+            this.boxRPMs.Name = "boxRPMs";
+            this.boxRPMs.ReadOnly = true;
+            this.boxRPMs.Size = new System.Drawing.Size(100, 26);
+            this.boxRPMs.TabIndex = 17;
+            // 
+            // lblWdMeasure
+            // 
+            this.lblWdMeasure.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblWdMeasure.Location = new System.Drawing.Point(660, 78);
+            this.lblWdMeasure.Margin = new System.Windows.Forms.Padding(0);
+            this.lblWdMeasure.Name = "lblWdMeasure";
+            this.lblWdMeasure.Size = new System.Drawing.Size(27, 22);
+            this.lblWdMeasure.TabIndex = 18;
+            this.lblWdMeasure.Text = "m";
+            this.lblWdMeasure.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Mainframe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(704, 381);
+            this.Controls.Add(this.lblWdMeasure);
+            this.Controls.Add(this.boxRPMs);
+            this.Controls.Add(this.lblKmh);
+            this.Controls.Add(this.boxV);
+            this.Controls.Add(this.lblVelocity);
+            this.Controls.Add(this.lblResRPM);
             this.Controls.Add(this.cmbCar);
             this.Controls.Add(this.lblCar);
             this.Controls.Add(this.lblFDrive);
@@ -199,6 +271,15 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Label lblWdMeasure;
+
+        private System.Windows.Forms.TextBox boxRPMs;
+
+        private System.Windows.Forms.Label lblResRPM;
+        private System.Windows.Forms.Label lblVelocity;
+        private System.Windows.Forms.TextBox boxV;
+        private System.Windows.Forms.Label lblKmh;
 
         private System.Windows.Forms.Label lblCar;
         private System.Windows.Forms.ComboBox cmbCar;
