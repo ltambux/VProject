@@ -11,7 +11,7 @@ public class Calculator{
     public Gear Selected { get; set; }
 
     public Calculator(){
-        Wheel=new(WheelDiam.R17,WheelWidth.mm205,TirePercentage.p55);
+        Wheel=new(WheelDiam.R17,WheelWidth.mm205,TirePercentage.p55); // default
         Selected=Data.Gear.First;
     }
 

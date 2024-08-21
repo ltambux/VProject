@@ -8,5 +8,5 @@ public static class Converter{
     public static double KmhToMs(this double kmh)=>kmh/3.6;
     public static double MsToKmh(this double ms)=>ms*3.6;
 
-    public static double Percent(this double value,double perc)=>perc/100;
+    public static double Percent(this double value,double perc)=>value*perc/100;
 }

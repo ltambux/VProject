@@ -26,6 +26,8 @@ public class Wheel{
         double rev=SingleRevolution();
         return (ms*60)/rev;
     }
+    // todo
+    /* https://www.calculator.net/tire-size-calculator.html */
 }
 
 public enum WheelDiam{
