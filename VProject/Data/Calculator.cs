@@ -6,8 +6,8 @@ namespace VProject.Data;
 public class Calculator{
     public Wheel Wheel {get;private set;}
     public Car Car {get;set;}
-    public GearRatio Gears => Car.GearRatios;
-    public GearRatio SpeedCalculation {get;set;}
+    public GearRatios Gears => Car.Gears;
+    public GearRatios SpeedCalculation {get;set;}
     public Gear Selected { get; set; }
 
     public Calculator(){
@@ -33,10 +33,11 @@ public class Calculator{
         };
     }
 
-    public int Speed(double rpm){
-        return-1;
+    public void SetGear(string gear){
+        Selected=GearRatios.GetGears(gear);
+        if(SelectedGear() is 0)throw new ArgumentOutOfRangeException($"{Selected}",
+            $"{Car.Model} doesn't have this gear value. Check the json");
     }
-
     public void SetWheel(string diam,string width,string p){
         Wheel.R=WheelExtension.WheelDiameter(diam);
         Wheel.Width=WheelExtension.WheelWidthFromString(width);
@@ -45,9 +46,8 @@ public class Calculator{
                   "Distance in a revolution = "+Wheel.SingleRevolution());
     }
 
-    public void SetGear(string gear){
-        Selected=GearRatio.GetGears(gear);
-        if(SelectedGear() is 0)throw new ArgumentOutOfRangeException($"{Selected}",
-            $"{Car.Model} doesn't have this gear value. Check the json");
+    public int Speed(double rpm){
+        return-1;
     }
+
 }

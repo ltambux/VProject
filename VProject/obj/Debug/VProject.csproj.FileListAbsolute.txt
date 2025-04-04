@@ -13,3 +13,4 @@ C:\xfiles\code\CSharp\VProject\VProject\obj\Debug\VProject.csproj.CopyComplete
 C:\xfiles\code\CSharp\VProject\VProject\obj\Debug\VProject.exe
 C:\xfiles\code\CSharp\VProject\VProject\obj\Debug\VProject.pdb
 C:\xfiles\code\CSharp\VProject\VProject\bin\Debug\Resources\CarsList.json
+C:\xfiles\code\CSharp\VProject\VProject\bin\Debug\Resources\WheelsList.json

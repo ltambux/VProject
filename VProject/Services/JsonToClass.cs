@@ -44,7 +44,7 @@ public static class JsonToClass{
         }
     }
 
-    public static Dictionary<string,GearRatio> ReadGearRatios(){
+    public static Dictionary<string,GearRatios> ReadGearRatios(){
         string filename="GearRatioConfig.json";
         string path=Path.Combine(Directory,filename);
         

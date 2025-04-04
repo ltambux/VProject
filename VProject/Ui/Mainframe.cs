@@ -15,7 +15,7 @@ public partial class Mainframe: Form {
     public Mainframe(){
         InitializeComponent();
         if(DesignMode || LicenseManager.UsageMode is LicenseUsageMode.Designtime)return;
-        InitData();
+        // InitData();
     }
     private void InitData(){
         _calculator=new();
@@ -24,7 +24,7 @@ public partial class Mainframe: Form {
         cmbPerc.Items.AddRange(WheelExtension.TiresPercs());
 
         cmbCar.Items.AddRange(CarContainer.Instance().Cars.Select(c=>$"{c.Brand} {c.Model}").ToArray());
-        cmbGearSelection.Items.AddRange(GearRatio.GetGears());
+        cmbGearSelection.Items.AddRange(GearRatios.GetGears());
     }
 
     public void CalculateWheel(){

@@ -2,7 +2,7 @@
 
 namespace VProject.Data;
 
-public class GearRatio{
+public class GearRatios{
     public double Rear {get;set;}
     public double First {get;set;}
     public double Second {get;set;}
@@ -12,9 +12,9 @@ public class GearRatio{
     public double Sixth {get;set;}
     public double FinalDrive {get;private set;}
 
-    public GearRatio(){}
+    public GearRatios(){}
     [JsonConstructor]
-    public GearRatio(double first,double second,double third,double fourth,double fifth,double sixth,
+    public GearRatios(double first,double second,double third,double fourth,double fifth,double sixth,
             double rear,double final){
         First=first;
         Second=second;
